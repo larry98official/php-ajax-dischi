@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  height: 100px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo {
+  height: 100%;
+}
+
+header .container .logo img {
+  width: 150px;
+}
+
+header .container .menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+header .container .menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: 70px;
+  padding: 50px 0;
+  background-color: #b3b3b3;
+}
+
+main .container .row.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+main .container .row.cards .card {
+  width: 150px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  margin: 25px;
+}
+
+main .container .row.cards .card .cover img {
+  width: 120px;
+}
+

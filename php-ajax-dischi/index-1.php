@@ -1,20 +1,3 @@
-<!--
-1. Stampare a schermo una decina di dischi musicali (vedi screenshot) in due modi diversi:
-   Solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina:
-   al caricamento della pagina ci saranno tutti i dischi.-
-    1.0 fare struttura in html
-    1.1 creare un nav superiore
-    1.2 crare la parte centrale
-    1.3 inserire il div per le cards
-    1.4 creare le card
-    1.5 inserire in data.php la struttura domanda e risposta da richiamare
-    1.6 richiamarla in html
-    1.7 in server.php fare chiamata
-2. Stampare a schermo una decina di dischi musicali (vedi screenshot) in due modi diversi:
-   Attraverso l’utilizzo di AJAX: al caricamento della pagina ajax
-   chiederà attraverso una chiamata i dischi a php e li stamperà attraverso handlebars.
--->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -52,23 +35,23 @@
                 </div>
                 <div class="row cards">
 
-                    <?php foreach ($albums as $key => $album) { ?>
-                    <div class="card">
-                        <div class="cover"><img src="<?php echo $album['cover']; ?>" alt=""></div>
-                        <div class="album"><span class="text"><?php echo $album['title']; ?></span></div>
-                        <div class="artist"><span class="text"><?php echo $album['artist']; ?></span></div>
-                        <div class="year"><span class="text"><?php echo $album['year']; ?></span></div>
-                    </div>
-                    <?php } ?>
 
                 </div>
                 <div class="row metodo">
-                    <a href="http://localhost:8888/boolean/69-php-ajax-dischi/index-1.php">Passa a metodo AJAX</a>
+                    <a href="http://localhost:8888/boolean/69-php-ajax-dischi/index.php">Passa a metodo PHP</a>
                 </div>
             </div>
         </main>
 
+        <script id="albums-template" type="text/x-handlebars-template">
+          <div class="card">
+            <div class="cover"><img src="{{cover}}"></img></div>
+            <div class="album"><span class="text">{{album}}</span></div>
+            <div class="artist"><span class="text">{{artist}}</span></div>
+            <div class="year"><span class="text">{{year}}</span></div>
+          </div>
+        </script>
 
-        <script src="js/app.js" charset="utf-8"></script>
+        <script src="dist/js/app.js" charset="utf-8"></script>
     </body>
 </html>
